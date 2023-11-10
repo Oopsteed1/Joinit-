@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Noto Sans TC';
+    src: url('../../fonts/NotoSansTC-Regular.ttf') format('truetype');
+  }
+
+.container {
+    width: 820px;
+    height: 876px;
+    position: relative;
+    display: flex;
+    padding: 40px 80px;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0 auto;
+    border-radius: var(--Radius---Modal, 20px);
+    background: #FFF;
+    box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.12), 8px 9px 12px 0px rgba(0, 0, 0, 0.10), 19px 20px 16px 0px rgba(0, 0, 0, 0.06);
+    font-family: 'Noto Sans TC', sans-serif;
+    .joinitLogo {
+        display: flex;
+        justify-content: center;
+    }
+    .close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        width: 48px;
+        height: 48px;
+    }
+    .title {
+        .subtitle {
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 48px;
+            margin-bottom: 16px;
+        }
+        .content {
+            color: var(--text-color-secondary, #666);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px; /* 157.143% */
+            letter-spacing: -0.014px;
+        }
+    }
+    .registerForm {
+        display: flex;
+        width: 660px;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 20px var(--Radius---Modal, 20px);
+        flex-wrap: wrap;
+        .name,
+        .phonenumber,
+        .email,
+        .birthday,
+        .inviteCode,
+        .password {
+            border-radius: var(--Radius---Text-Field, 4px);
+            border: 1px solid var(--text-field-color-stroke-default, #999);
+            background: var(--text-field-color-filled-default, #FEFEFE);
+            display: flex;
+            width: 320px;
+            height: 56px;
+            padding: 16px;
+            align-items: center;
+            gap: 8px;
+        }
+        .genderContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            flex: 1 0 0;
+            align-self: stretch;        
+            .gender {
+                display: flex;
+                padding: 10px 16px;
+                justify-content: center;
+                align-items: center;
+                gap: 4px;
+                flex: 1 0 0;
+                align-self: stretch;
+                border-radius: var(--Radius---Button, 4px);
+                border: 1px solid var(--button-color-black-outline-default, #333);
+            }
+        }
+    }
+}
