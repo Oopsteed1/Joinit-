@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'Noto Sans TC';
+    src: url('../../fonts/NotoSansTC-Regular.ttf') format('truetype');
+  }
+
+.mobileRegisterContainer {
+    position: absolute;
+    left: 480px;
+    top: 259px;
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    border-radius: var(--Radius---Modal, 20px);
+    background: #FFF;
+    box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.12), 8px 9px 12px 0px rgba(0, 0, 0, 0.10), 19px 20px 16px 0px rgba(0, 0, 0, 0.06);
+    width: 480px;
+    height: 506px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    .joinitLogo {
+        display: flex;
+        justify-content: center;
+    }
+    .close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        width: 48px;
+        height: 48px;
+    }
+    .title {    
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+        .subtitle {
+            font-size: 32px;
+            line-height: 48px;
+            text-align: center;
+
+        }
+        .content {
+            color: var(--text-color-secondary, #666);
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: -0.014px;
+            text-align: center;
+        }
+    }
+    .registerForm {
+        display: flex;
+        padding: 0px 40px; 
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        align-self: stretch;
+        .phonenumber {
+            display: flex;
+            width: 320px;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 320px;
+            height: 56px;
+            padding: 16px;
+            align-items: center;
+            gap: 8px;
+            border-radius: var(--Radius---Text-Field, 4px);
+            border: 1px solid var(--text-field-color-stroke-default, #999);
+            background: var(--text-field-color-filled-default, #FEFEFE);
+            color: var(--text-color-tertiary, #CCC);
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: 0.021px;
+        }
+        .focused {
+            border-radius: var(--Radius---Text-Field, 4px);
+            border: 1.5px solid var(--text-field-color-stroke-focused, #4D4D4D);
+            background: var(--text-field-color-filled-focused, #F5F5F5);
+        }
+        .resentCode {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .noCode {
+                display: flex;
+                width: 95px;
+                flex-direction: column;
+                justify-content: center;
+                align-self: stretch;
+                color: var(--text-color-tertiary, #999);
+                text-align: justify;
+                font-size: 10px;
+                line-height: 16px;
+                letter-spacing: 0.025px;
+            }
+            .resent {
+                display: flex;
+                padding: 8px 12px;
+                justify-content: center;
+                align-items: center;
+                gap: 4px;
+                border-radius: var(--Radius---Button, 4px);
+                color: var(--text-color-primary, #1A1A1A);
+                font-size: 10px;
+                line-height: 16px;
+                letter-spacing: 0.025px;
+            }
+        }
+    }
+    .nextBtn {
+        display: flex;
+        width: 320px;
+        padding: 13px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        border-radius: var(--Radius---Button, 4px);
+        background: var(--button-color-brand-filled-default, #BD362F);
+        color: var(--text-color-white, #F5F5F5);
+        text-align: justify;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.021px;
+        cursor: pointer;
+    }
+    .disabled {
+        background: var(--button-color-brand-filled-disable, #CCC);
+        cursor: default;
+    }
+    .back {
+        display: flex;
+        width: 320px;
+        padding: 13px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        border-radius: var(--Radius---Button, 4px);
+        border: 1px solid var(--button-color-brand-outline-default, #BD362F);
+        color: var(--text-color-brand, #BD362F);
+        text-align: justify;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.021px;
+    }
+}

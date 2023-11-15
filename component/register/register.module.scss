@@ -11,11 +11,13 @@
     padding: 40px 80px;
     flex-direction: column;
     gap: 24px;
-    margin: 0 auto;
+    margin: 150px auto;
     border-radius: var(--Radius---Modal, 20px);
     background: #FFF;
     box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.12), 8px 9px 12px 0px rgba(0, 0, 0, 0.10), 19px 20px 16px 0px rgba(0, 0, 0, 0.06);
     font-family: 'Noto Sans TC', sans-serif;
+    font-style: normal;
+    font-weight: 400;
     .joinitLogo {
         display: flex;
         justify-content: center;
@@ -33,18 +35,16 @@
     .title {
         .subtitle {
             font-size: 32px;
-            font-style: normal;
-            font-weight: 400;
             line-height: 48px;
             margin-bottom: 16px;
+            text-align: center;
         }
         .content {
             color: var(--text-color-secondary, #666);
             font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 22px; /* 157.143% */
+            line-height: 22px;
             letter-spacing: -0.014px;
+            text-align: center;
         }
     }
     .registerForm {
@@ -54,6 +54,36 @@
         align-content: flex-start;
         gap: 20px var(--Radius---Modal, 20px);
         flex-wrap: wrap;
+        .phonenumber {
+            position: relative;
+            .close {
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                width: 20px;
+                height: 20px;
+            }
+            .clearButton {
+                width: 0;
+                height: 0;
+                display: block;
+            }
+        }
+        .textContainer {
+            position: relative;
+            .close {
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                width: 20px;
+                height: 20px;
+            }
+            .clearButton {
+                width: 0;
+                height: 0;
+                display: block;
+            }
+        }
         .name,
         .phonenumber,
         .email,
@@ -69,6 +99,7 @@
             padding: 16px;
             align-items: center;
             gap: 8px;
+            font-size: 14px;
         }
         .genderContainer {
             display: flex;
@@ -87,6 +118,197 @@
                 align-self: stretch;
                 border-radius: var(--Radius---Button, 4px);
                 border: 1px solid var(--button-color-black-outline-default, #333);
+                font-size: 12px;
+            }
+            .red {
+                background-color: #F5F5F5;
+            }
+        }
+        .phonenumber {
+            .selectCountry {
+                width: 82px;
+                height: 40px;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.7675 7.27093C18.0959 7.61267 18.0737 8.14544 17.7179 8.46089L10.5947 14.7767C10.2588 15.0744 9.74118 15.0744 9.40534 14.7767L2.28206 8.46089C1.92627 8.14543 1.90409 7.61267 2.23251 7.27093C2.56092 6.92918 3.11558 6.90787 3.47137 7.22333L10 13.0119L16.5286 7.22333C16.8844 6.90787 17.4391 6.92918 17.7675 7.27093Z" fill="%231A1A1A"/></svg>') no-repeat 47px center;
+                padding: 10px 16px 10px 0px;
+                background-color: #fff;
+
+                .countryCode {
+                    display: flex;
+                    gap: 16px;
+                    border-radius: var(--Radius---Button, 4px);
+                    height: 40px;
+                    width: 20px;
+                }
+            }
+        }
+    }
+    .checkbox {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.012px;
+        .checkboxLabel {
+            display: flex;
+            padding: 8px 16px;
+            align-items: center;
+            .inputCheckboxContainer {
+                display: flex;
+                padding: 0 16px 0px 0px;
+                align-items: center;
+                gap: 8px;
+                cursor: pointer;
+                position: relative;
+                .inputCheckbox:checked {
+                    display: none;
+                    width: 20px;
+                    height: 20px;
+                }
+                .inputCheckbox {
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                }
+                .checkboxIcon {
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    display: none;
+                }
+                .inputCheckbox:checked + .checkboxIcon {
+                    width: 20px;
+                    height: 20px;
+                    background-image: url('/assets/icon/CheckboxRed.png');
+                    display: block;
+                    cursor: pointer;
+                }
+            }
+            .inputCheckboxContainer {
+                position: relative;
+              }
+            .link1,
+            .link2,
+            .link3,
+            .link4,
+            .link5 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: var(--Radius---Button, 4px);
+                height: auto;
+                width: auto;
+                color: var(--text-color-primary, #1A1A1A);
+                position: relative;
+                text-decoration-line: underline;
+            }
+            .link1 {
+                padding: 0px 16px 0px 0;
+            }
+            .link2,
+            .link3,
+            .link4,
+            .link5 {
+                padding: 0px 16px 0px 5px;
+            }
+            .link1,
+            .link2,
+            .link3,
+            .link4 {
+                &::after {
+                    content: "、";
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+    }
+    .next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .nextBtn {
+            display: flex;
+            width: 320px;
+            padding: 13px 20px;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            border-radius: var(--Radius---Button, 4px);
+            background: var(--button-color-brand-filled-disable, #CCC);
+            color: var(--text-color-white, #F5F5F5);
+            text-align: justify;
+            font-size: 14px;
+        }
+        .disabledBtn {
+            background: #BD362F;
+          }
+    }
+    .login {
+        color: var(--text-color-primary, #1A1A1A);
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.012px;
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+        .hasAccount {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .loginWithAcc {
+                display: flex;
+                padding: 11px 16px;
+                justify-content: center;
+                align-items: center;
+                gap: 4px;
+            }
+            .loginLink {
+                text-decoration-line: underline;
+            }
+        }
+        .borderLine {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: #FFF;
+            padding: 0 16px;
+            color: var(--text-color-tertiary, #CCC);
+            text-align: center;
+            font-size: 10px;
+            &::before,
+            &::after {
+              content: '';
+              position: absolute;
+              top: 50%;
+              border-top: 1px solid #CCC;
+              width: 580px;
+            }
+            &::before {
+                left: 0;
+            }
+            &::after {
+                right: 0;
+            }
+            .or {
+                background: #FFF;
+                padding: 0 16px;
+                z-index: 1;
+            }
+        }
+        .linkAccount {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 32px;
+            .linkIcon {
+                display: flex;
+                width: 48px;
+                height: 48px;
+                padding: 2px;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
             }
         }
     }

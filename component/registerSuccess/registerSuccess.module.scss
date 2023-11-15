@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'Noto Sans TC';
+    src: url('../../fonts/NotoSansTC-Regular.ttf') format('truetype');
+  }
+
+.successContainer {
+    display: flex;
+    width: 448px;
+    padding: 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 496px;
+    top: 192px;
+    border-radius: var(--Radius---Toast, 4px);
+    background: var(--grayscale-color-white, #FEFEFE);
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.13), 3px 4px 6px 0px rgba(0, 0, 0, 0.12), 6px 9px 9px 0px rgba(0, 0, 0, 0.06);
+    font-family: Noto Sans TC;
+    .close {
+        display: flex;
+        padding: 8px;
+        align-items: flex-start;
+        gap: 36px;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        border-radius: var(--Radius---Button, 4px);
+        .closeIcon {
+            width: 16px;
+            height: 16px;
+        }
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        display: flex;
+        width: 448px;
+        .pass {
+            width: 24px;
+            height: 24px;
+            .passIcon {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        .contentContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+            flex: 1 0 0;
+            .title {
+                color: var(--text-color-primary, #1A1A1A);
+                font-size: 20px;
+                line-height: 30px;
+                letter-spacing: 0.04px;
+            }
+            .content {
+                color: var(--text-color-primary, #1A1A1A);
+                font-size: 14px;
+                line-height: 22px;
+                letter-spacing: -0.014px;
+            }
+        }
+    }
+}
