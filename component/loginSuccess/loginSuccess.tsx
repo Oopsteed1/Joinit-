@@ -1,3 +1,5 @@
+// loginSuccess.tsx
+'use client';
 import React from 'react'
 import styles from '../loginSuccess/loginSuccess.module.scss'
 import Image from 'next/image';

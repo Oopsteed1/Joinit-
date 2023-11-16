@@ -42,7 +42,8 @@ export default function Register() {
       };
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>, setValue: React.Dispatch<React.SetStateAction<string>>) => {
-        setValue(event.target.value);
+        const value = event.target.value;
+        setValue(value);
       };
     
       const clearInput = (setValue: React.Dispatch<React.SetStateAction<string>>) => {
